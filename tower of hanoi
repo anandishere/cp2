@@ -1,0 +1,14 @@
+#Tower of Honai 
+no_of_pegs=int(input("Enter the no of pegs:"))
+no_of_balls=int(input("Enter the no of Balls:"))
+square_list=[i*i for i in range(no_of_balls+1)]
+list1=[[] for i in range(0,no_of_pegs)]
+for i in range(1,no_of_balls):
+    for j in list1:
+        if len(j)==0:
+            j.append(i)
+            break
+        elif j[-1]+i in square_list:
+            j.append(i)
+            break
+print(list1)
